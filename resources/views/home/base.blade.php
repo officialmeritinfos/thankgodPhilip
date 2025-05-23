@@ -75,7 +75,7 @@
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="main-nav__logo-box">
                     <a href="{{url('/')}}" class="main-nav__logo">
-                        <img src="{{asset('home/images/'.$web->logo)}}" style="width: 150px;" alt="Awesome Image">
+                        <img src="{{asset('home/images/'.$web->logo)}}" style="width: 100px;" alt="Awesome Image">
                     </a>
 
                     <div id="google_translate_element"></div>
@@ -238,11 +238,13 @@
 </div><!-- /.page-wrapper -->
 <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
-<div class="telegram-float-widget">
-    <a href="https://wa.me/{{$web->phone}}" target="_blank">
-        <img src="https://cdn2.iconfinder.com/data/icons/social-media-applications/64/social_media_applications_23-whatsapp-256.png" alt="" width="50">
-    </a>
-</div>
+@if(!empty($web->phone))
+    <div class="telegram-float-widget">
+        <a href="https://wa.me/{{$web->phone}}" target="_blank">
+            <img src="https://cdn2.iconfinder.com/data/icons/social-media-applications/64/social_media_applications_23-whatsapp-256.png" alt="" width="50">
+        </a>
+    </div>
+@endif
 
 <div class="side-menu__block">
 
@@ -358,7 +360,18 @@
     // }
 </script>
 <!-- end popup massage -->
-
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'e4e12da505d85f1afa9e12807b748a24d4785afb';
+    window.smartsupp||(function(d) {
+        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+        c.type='text/javascript';c.charset='utf-8';c.async=true;
+        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
 
 </body>
 </html>
