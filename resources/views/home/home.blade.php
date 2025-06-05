@@ -2,7 +2,7 @@
 @section('content')
 
 
-    <section class="banner-one" id="banner" style="background-image: url({{asset('home/lassets/images/background/1.webp')}});">
+    <section class="banner-one" id="banner" style="background-image: url({{asset('home/lassets/images/background/banner-bg-1-1.png')}});">
 
         <img src="{{asset('home/lassets/images/shapes/banner-shapes-1-1.png')}}" alt="" class="banner-one__shape-1">
         <img src="{{asset('home/lassets/images/shapes/banner-shapes-1-2.png')}}" alt="" class="banner-one__shape-2">
